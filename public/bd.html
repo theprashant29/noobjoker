@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BDSeoTools</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+   <link rel="icon" href="http://bdseotools.com/noobjoker/icon.png" type="png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css">
+
+    <!-- body font -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="container"><center>
+    <div class="main">
+        <h1>BDSeoTools</h1>
+        <div id="error"></div>
+        <form action="no-js" method="get" id="unblocker-form">
+            <p>
+                网址:
+                <input type="text" id="url" name="url" autofocus="autofocus" placeholder="www.google.com"/>
+                <input type="submit" value="Go"/>
+            </p>
+        </form>
+		
+		<h1>BDSeoTools</h1>
+		
+		
+		
+		
+		
+        <h5>Contact us: Ytech8851@gmail.com</h5>
+     
+</div></center>
+<script>
+    function $(id) {
+        return document.getElementById(id);
+    }
+
+  
+
+    function checkError() {
+        var search = window.location.search;
+        var start = search.indexOf('error=');
+        if (start > -1) {
+            var stop = search.indexOf('&', start);
+            if (stop == -1) {
+                stop = undefined;
+            }
+            // +6 for "error="
+            var err = search.substr(start + 6, stop);
+            var $error = $('error');
+            $error.innerText = $error.textContent = decodeURIComponent(err);
+            $error.style.display = "block";
+        }
+    }
+
+    window.onload = function () {
+        $('url').focus();
+        checkError();
+    }
+</script>
+</body>
+</html>
